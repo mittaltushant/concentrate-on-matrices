@@ -1,0 +1,70 @@
+baseURL = 'http://mittaltushant.github.io/concentrate-on-matrices'
+languageCode = 'en-us'
+title = 'Random Matrix Theory'
+theme = "cactus"
+
+# summaryLength = 2
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Talks"
+url = "/posts"
+weight = 2
+
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
+
+[params]
+
+  colortheme = "classic" # dark, light, white, or classic
+  rss = false # generate rss feed. default value is false
+  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+  showAllPostsArchive = false # default
+  mathjax = true
+  mainSectionTitle = "Talks"
+
+  # Home page settings
+  description = "This reading focuses on topics in Random Matrix Theory. Random Matrix Theory has numerous applications to theoretical computer science."
+  mainSection = "posts" # your main section
+  showAllPostsOnHomePage = true # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  
+  tagsOverview = false # show tags overview by default.
+  showProjectsList = false # show projects list by default (if projects data file exists).
+  projectsUrl = "https://github.com/gohugoio" # title link for projects list
+
+  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+  dateFormat = "2006-01-02" # default
+
+  # Post page settings
+  show_updated = true # default
+  showReadTime = true # default
+
+
+  # the value of name should be an valid font awesome icon name (brands type)
+  # https://fontawesome.com/icons?d=gallery&s=brands
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/mittaltushant/concentrate-on-matrices"
+  [[params.social]]
+    name = "email"
+    link = "tushant@uchicago.edu"  # no need for "mailto:" in the head
