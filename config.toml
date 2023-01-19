@@ -40,7 +40,8 @@ weight = 2
   googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
   showAllPostsArchive = false # default
   mathjax = true
-  mainSectionTitle = "Talks"
+  mainSectionTitle = "Earlier Talks and Notes"
+  author = "Tushant"
 
   # Home page settings
   description = "This reading focuses on topics in Random Matrix Theory. Random Matrix Theory has numerous applications to theoretical computer science."

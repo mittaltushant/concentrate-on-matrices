@@ -1,8 +1,8 @@
 ---
-title: Matrix Chernoff
-date: 2023-01-30
+title: From Poincaré inequalities to nonlinear matrix concentration
+date: 2023-02-02
+speaker: June Wu
 ---
 
 
-## Overview
-dd
+## 

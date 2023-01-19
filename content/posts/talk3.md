@@ -1,6 +1,9 @@
 ---
-title: Undecided
-date: 2023-02-06
+title: A Matrix Expander Chernoff Bound 
+date: 2023-02-09
+speaker: Tushant
 ---
 
-Sorry no notes yet :(
+We will get here when we do!
+## Introduction
+

@@ -1,8 +1,11 @@
 ---
-title: Basics
-date: 2023-01-23
+title: Matrix Chernoff Bounds for sums of independent random variables 
+date: 2023-01-26
 category: notes
+author: Madhur Tulsiani
+abstract: "We do a matrix-version of our dear Chernoff bound."
 ---
 
-In this talk, 
+In this talk, we will look at a matrix-version of our dear Chernoff bound.
+
 ## Overview

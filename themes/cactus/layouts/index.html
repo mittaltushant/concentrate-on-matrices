@@ -36,14 +36,17 @@
   {{ end }}
   {{ partial "optional-about.html" . }}
   </section>
-  <section id="venue">
-    <span class="h1"> Venue</span>
-    <span class="h2">TTIC 501, Mondays 4:00 PM CDT, Zoom link (on request)  
-    </span>
+
+  <section id="next">
+    <span class="h1"> Next Talk</span>
+    <span class="h2"> Matrix Chernoff Bounds by <a href="https://home.ttic.edu/~madhurt/"> Madhur Tulsiani </a> </span>
+    <span class="h3"> 26 January, Thursday 3:30 PM CDT, TTIC 501. <a href=""> Zoom link </a> (pass:matrix is a l???r map) </span>
   </section>
+
 
   <section id="writing">
     <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">{{ .Site.Params.mainSectionTitle | default "Writings" }}</a></span>
+  <!---
     {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
     <span class="h2">Topics</span>
     <span class="widget tagcloud">
@@ -54,9 +57,8 @@
       </a>
       {{ end }}
     </span>
-    <span class="h2">Most recent</span>
     {{ end }}
-
+  -->
     {{ $showAllPostsOnHomePage := true }}
     {{ if (isset .Site.Params "showallpostsonhomepage") }}
       {{ $showAllPostsOnHomePage = .Site.Params.ShowAllPostsOnHomePage }}
@@ -84,13 +86,14 @@
       {{ range (first (.Scratch.Get "count") $mainPosts) }}
         <li class="post-item">
           <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div>
-          <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a></span>
+          <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}} {{ end }}</a>
+          </span>
         </li>
       {{ end }}
     </ul>
     {{ end }}
   </section>
-
+<!-----
   {{ $showProjectsList := false }}
   {{ if (isset .Site.Params "showprojectslist") }}
     {{ $showProjectsList = .Site.Params.showProjectsList }}
@@ -113,4 +116,5 @@
     </ul>
   </section>
   {{ end }}
+  --->
 {{ end }}
