@@ -9,7 +9,7 @@
       {{ range $index, $elem := .Site.Params.social}}
       {{ if eq $elem.name "email" }}
         <a class="icon" target="_blank" rel="noopener" href="mailto:{{ $elem.link }}" aria-label="Email">
-          you can contact the organizer,Tushant, at <i class="fas fa-envelope" aria-hidden="true"></i>
+          you can contact Tushant, at <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
         {{ else if eq $elem.name "rss" }}
         <a class="icon" target="_blank" rel="noopener" href="{{ $elem.link }}" aria-label="RSS">
@@ -37,10 +37,25 @@
   {{ partial "optional-about.html" . }}
   </section>
 
+  <section id="ven">
+    <span class="h1"> Venue</span>
+    <span> Thursdays, 3:30 PM CDT, TTIC 501. <a href="https://uchicago.zoom.us/j/97696222494?"> Zoom link </a> (pass:matrix is a l???r map) </span>
+  </section>
+
+
   <section id="next">
-    <span class="h1"> Next Talk</span>
-    <span class="h2"> Matrix Chernoff Bounds by <a href="https://home.ttic.edu/~madhurt/"> Madhur Tulsiani </a> </span>
-    <span class="h3"> 26 January, Thursday 3:30 PM CDT, TTIC 501. <a href=""> Zoom link </a> (pass:matrix is a l???r map) </span>
+    <span class="h1"> Upcoming Talks</span>
+    <ul class="post-list">
+      <li class="post-item">
+        <div class="meta"><time datetime="2023-01-26">2023-01-26</time></div><span> Matrix Chernoff Bounds <a href="https://home.ttic.edu/~madhurt/"> Madhur Tulsiani </a></span>
+       </li>
+      <li class="post-item">
+        <div class="meta"><time datetime="2023-01-26">2023-02-02</time></div><span> Poincaré inequalities to nonlinear matrix concentration by <a href=""> June Wu </a></span>
+       </li>
+    </ul>
+   <!--- <span class="h2"> Matrix Chernoff Bounds by <a href="https://home.ttic.edu/~madhurt/"> Madhur Tulsiani </a> </span>
+    <span class="h3"> 26 January, Thursday 4:00 PM CDT, TTIC 501. <a href="https://uchicago.zoom.us/j/97696222494?"> Zoom link </a> (pass:matrix is a l???r map) </span>
+   -->
   </section>
 
 
