@@ -140,6 +140,15 @@ article {
     }
   }
 }
+.article-speaker {
+  .tag-link {
+    &:before {
+      content: "#";
+      @include underline(10px, $color-link);
+    }
+  }
+}
+
 .article-category {
   .category-link {
     @include underline(10px, $color-link);

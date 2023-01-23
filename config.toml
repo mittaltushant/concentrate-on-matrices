@@ -40,11 +40,12 @@ weight = 2
   googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
   showAllPostsArchive = false # default
   mathjax = true
-  mainSectionTitle = "Notes"
+  mainSectionTitle = "Abstracts/Notes"
   author = "Tushant"
+  speaker = "Author"
 
   # Home page settings
-  description = "This reading focuses on topics in Random Matrix Theory. Random Matrix Theory has numerous applications to theoretical computer science."
+  description = "This reading focuses on topics in Random Matrix Theory, and its applications to theoretical computer science."
   mainSection = "posts" # your main section
   showAllPostsOnHomePage = true # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
@@ -66,6 +67,9 @@ weight = 2
   [[params.social]]
     name = "github"
     link = "https://github.com/mittaltushant/concentrate-on-matrices"
+  [[params.social]]
+    name = "docs"
+    link = "https://docs.google.com/document/d/1WWOtcXEVokPtiQFLKlKCggwf1VuC5-aucun6HQNDlHs/edit?usp=sharing"
   [[params.social]]
     name = "email"
     link = "tushant@uchicago.edu"  # no need for "mailto:" in the head
