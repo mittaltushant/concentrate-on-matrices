@@ -103,15 +103,17 @@
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
+      packages: {'[+]': ['textmacros']},
       macros: {
         F: "\\mathbb{F}",
         R: "\\mathbb{R}",
         eps: "\\epsilon",
         cD: "\\mathcal{D}",
+        tr: "\\mathrm{tr}",
         abs: ["\\left\\lvert#1\\right\\rvert",1],
         norm: ["\\left\\lVert#1\\right\\rVert",1],
         Ex: ["\\mathop{\\mathbb{E}}_{#1} \\left[#2\\right] ",2],
-        ex: ["\\mathop{\\mathbb{E}} \\left[#1\\right]}",1],
+        ex: ["\\mathop{\\mathbb{E}} \\left[#1\\right]",1],
         ip: ["\\left\\langle #1\\right\\rangle",1],
         Prob: ["\\mathop{\\mathbb{P}}_{#1} \\left[#2\\right]",2],
         prob: ["\\mathop{\\mathbb{P}} \\left[#1\\right]", 1],
