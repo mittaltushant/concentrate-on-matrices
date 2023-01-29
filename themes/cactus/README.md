@@ -42,7 +42,7 @@ hugo server
 
 ```toml
 [params]
-  css = ["css/custom.css"]
+  css = ["static/css/latex.css"]
 ```
 
 You can add multiple custom stylesheets which will be loaded after the main theme css.

@@ -51,7 +51,7 @@ Thus, we can talk of $e^A$ for any matrix $A$, of $\log (B)$ for any positive-de
 
 ### Using the trace inequalities
 
-- [AW] By definition of the matrix exponential, $\lambda_\max(e^A) = e^{\lambda_\max(A)}$. Thus, treating $\lambda_\max(A)$ as a scalar random variable, we can plug it into the scalar inequality we used earlier, $\ex{e^{\theta \eps a}} \leq e^{\frac{\theta^2 a^2}{2}}$. Thus, we get, $\ex{\lambda_\max (e^{\theta \eps_i A_i})} \leq e^{\frac{\theta^2 \lambda_\max(A_i)^2}{2}}$. It is now exactly like the scalar Chernoff and we get a variance term of $\sum_i \lambda_\max(A_i)^2$.
+- [Ahlswede-Winter] By definition of the matrix exponential, $\lambda_\max(e^A) = e^{\lambda_\max(A)}$. Thus, treating $\lambda_\max(A)$ as a scalar random variable, we can plug it into the scalar inequality we used earlier, $\ex{e^{\theta \eps a}} \leq e^{\frac{\theta^2 a^2}{2}}$. Thus, we get, $\ex{\lambda_\max (e^{\theta \eps_i A_i})} \leq e^{\frac{\theta^2 \lambda_\max(A_i)^2}{2}}$. It is now exactly like the scalar Chernoff and we get a variance term of $\sum_i \lambda_\max(A_i)^2$.
 
 - [Tropp] We need two more facts. 
     - Firstly, a matrix version of the 1-variable inequality. This is given by $\log \ex{e^\theta \eps_i A_i} \preceq \frac{\theta^2 A_i^2}{2}$. Here the order being used is the Loewner order ($A\preceq B$ iff $B-A$ is PSD). The proof is analogous to the scalar proof and is given in Tropp's book [].
@@ -70,10 +70,10 @@ Now, we are ready.
 This, gives us a variance term of $\lambda_\max\left(\sum_i A_i^2\right) $ which is better than the earlier one of $\sum_i \lambda_\max\left(A_i\right)^2$ by up to a factor of $d$. This matters as we have the factor of $d$ in the exponent.
 
 ### Deriving the trace inequalities
-- [Golden-Thompson] Ahlswede--Winter use the , 
-	\\[\tr(e^{A+B}) \leq \tr(e^A e^B) \leq \lambda_\max(e^A)\tr(e^B)\\]
+- [Golden-Thompson] Ahlswede--Winter use the following sequence of inequalities, 
+	\\[\tr(e^{A+B}) \leq \tr(e^A e^B) \leq \lambda_\max(e^A)\tr(e^B).\\]
 	
- Lie-Trotter formula says that $e^{A+B} = \lim_{n\to \infty} \\left(e^{A/n}e^{B/n} \\right)^{n}$. Such a formula can be used to derive the first inequality, which is called the **Golden-Thompson** inequality $\tr(e^{A+B})\leq \tr(e^Ae^B)$. However, this inequality is false for three or more matrices. .
+	The first inequality is called the **Golden-Thompson** inequality which can be derived from the Lie-Trotter formula which says that although $e^{A+B}\neq e^Ae^B$, this holds in the limit. Formally,  $e^{A+B} = \lim_{n\to \infty} \\left(e^{A/n}e^{B/n} \\right)^{n}$. However, the Golden-Thompson inequality is false for three or more matrices. Thus, it cannot be applied directly. To overcome this, Ahlswede--Winter use the second inequality, a proof of which can be found in Harvey's [notes](https://www.math.uwaterloo.ca/~harvey/W11/Lecture11Notes.pdf). We now show the derivation, 
 \\[ 
 \begin{align}
 \ex{\tr(e^{\theta X + 0)})} ~=~ \ex{\tr(e^{\theta \sum_i \eps_i A_i + 0})} ~&\leq~ \ex{\lambda_\max(e^{\eps_1A_1}) \tr(e^{\theta \sum_{i=2}^n \eps_i A_i+ 0})}\\\
@@ -82,8 +82,22 @@ This, gives us a variance term of $\lambda_\max\left(\sum_i A_i^2\right) $ which
 \end{align}
 \\]
 
-- [Lieb's Concavity] Tropp's insight is that one must instead work with the cumulant generating function, $\log e^{X}$. The advantage of this POV is that this approach generalizes to a much more general settings. Moreover, it gives tighter bounds. 
+- [Lieb's Concavity] Tropp's insight is that one must instead work with the cumulant generating function, $\log e^{X}$. The advantage of this POV is that this approach generalizes to a much more general settings. Moreover, as we have seen, it gives tighter bounds. The key is the following result of Lieb. 
 
+{{< css.inline >}}
+<span class="theorem">(Lieb) <i> Let $H$ be any Hermitian matrix. Then, the function $f(A) = \tr\\, \exp (H +\log A)$ defined on the cone of
+positive-definite matrices, is concave. </i>
+</span>
+{{</ css.inline >}}
+
+One now only needs to apply Jensen's to get the trace inequality, 
+\\[
+\begin{align}
+\mathbb{E}\Ex{X_n}{\tr\\, e^{\sum_{i<n} X_i+ X_n} } ~&=~ \mathbb{E}\Ex{X_n}{\tr\\, e^{\sum_{i<n} X_i+ \log (e^{X_n})} }\\\
+~&\leq~ \mathbb{E}\\, \tr\\, e^{\sum_{i<n} X_i +\log \Ex{X_n}{e^{X_n}}} \\;\\;\small{\text{(Jensen's)}}\\\
+~&\leq~ \tr\\, e^{\sum_{i} \log \Ex{X_i}{e^{X_i}}} \\;\\;\small{\text{(Repeating the above steps for all variables)}}
+\end{align}
+\\]  
  
 
 ## Resources 

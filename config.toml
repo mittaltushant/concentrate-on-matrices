@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Random Matrix Theory'
 theme = "cactus"
 
+enableInlineShortcodes = true
 # summaryLength = 2
 
 # Main menu which appears below site header.
@@ -43,6 +44,7 @@ weight = 2
   mainSectionTitle = "Abstracts/Notes"
   author = "Tushant"
   speaker = "Author"
+  css = ["static/css/latex.css"]
 
   # Home page settings
   description = "This reading focuses on topics in Random Matrix Theory, and its applications to theoretical computer science."
