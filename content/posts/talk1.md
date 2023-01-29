@@ -36,7 +36,7 @@ We will give two proofs each of which give a slightly different $\sigma$. The fi
 ### Lifting functions to matrices
 Let $f: I \to \R$ be a function defined on an interval $I$. Let $A = Q\Lambda Q^* $ be an Hermitian matrix such that all eigenvalues of $A$ lies in $I$, i.e., $\mathrm{Spec}(A)\subseteq I$. Then, we can define $f(A) := Qf(\Lambda) Q^*$, where $f(\Lambda)$ is obtained by applying $f$ entry-wise to the diagonal matrix $\Lambda$, i.e., $f(\Lambda) = \mathrm{diag}(f(\lambda_1), \cdots, f(\lambda_d))$.
 
-Thus, we can talk of $e^A$ for any matrix $A$, of $\log (B)$ for any positive-definite matrix $B$. In particular, $\log (\sum_i \alpha_i e^B_i)$ is well-defined for $\alpha_i > 0$ as $e^{B_i}$ are all positive-definite and the set of PD matrices forms a (open) cone.   
+Thus, we can talk of $e^A$ for any matrix $A$, of $\log (B)$ for any positive-definite matrix $B$. In particular, $\log (\sum_i \alpha_i e^{B_i})$ is well-defined for $\alpha_i > 0$ as $e^{B_i}$ are all positive-definite and the set of PD matrices forms a (open) cone.   
 ### Mimicking the scalar proof
 
  One can repeat the scalar argument for the first two steps but it is not clear how to handle the term, $\ex{\lambda_{\max}(e^{\theta X})}$. Ideally, we would like to have $\prod_i \ex{\lambda_\max (e^{\theta \eps_i A_i})}$. The key difficulty is that $e^{A+B}\neq e^Ae^B$ for matrices. This can be resolved (by at least) two approaches. 
