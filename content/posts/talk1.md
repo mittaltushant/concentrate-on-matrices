@@ -13,7 +13,7 @@ In this talk, we proved a matrix-version of a simple Chernoff bound. The scalar 
 Let $X = \sum_i \eps_ia_i $ where $a_i \in \R$ are fixed, and, $\eps_i$ are $\pm 1$ Rademacher random variables. Then,
 \\[ \prob{\sum_i \eps_ia_i > t} ~\leq~ e^{\frac{-t^2}{2\sigma^2}},\\;\\; \sigma^2 = \ex{X^2} =\\; \sum_i a_i^2
 \\]
-Let's look at a standard proof of this to see where it breaks down. For a single Rademacher variable, one can show that $\ex{e^{\theta \eps a}} = cosh(\theta a) \leq e^{\frac{\theta^2 a^2}{2}}$. The goal is to break the sum on $n$ such variables as a product of these. Fix $\theta > 0\in \R$.
+Let's look at a standard proof of this to see where it breaks down. For a single Rademacher variable, one can show that $\ex{e^{\theta \eps a}} = \mathrm{cosh}(\theta a) \leq e^{\frac{\theta^2 a^2}{2}}$. The goal is to break the sum on $n$ such variables as a product of these. Fix $\theta > 0\in \R$.
 \\[
 \begin{align}
 \prob{X > t} ~&=~ \prob{e^{\theta X} > e^{\theta t}}\\;\\;\small{\text{ (Monotonicity of exponential)} }\\\
@@ -36,7 +36,7 @@ We will give two proofs each of which give a slightly different $\sigma$. The fi
 ### Lifting functions to matrices
 Let $f: I \to \R$ be a function defined on an interval $I$. Let $A = Q\Lambda Q^* $ be an Hermitian matrix such that all eigenvalues of $A$ lies in $I$, i.e., $\mathrm{Spec}(A)\subseteq I$. Then, we can define $f(A) := Qf(\Lambda) Q^*$, where $f(\Lambda)$ is obtained by applying $f$ entry-wise to the diagonal matrix $\Lambda$, i.e., $f(\Lambda) = \mathrm{diag}(f(\lambda_1), \cdots, f(\lambda_d))$.
 
-
+Thus, we can talk of $e^A$ for any matrix $A$, of $\log (B)$ for any positive-definite matrix $B$. In particular, $\log (\sum_i \alpha_i e^B_i)$ is well-defined for $\alpha_i > 0$ as $e^{B_i}$ are all positive-definite and the set of PD matrices forms a (open) cone.   
 ### Mimicking the scalar proof
 
  One can repeat the scalar argument for the first two steps but it is not clear how to handle the term, $\ex{\lambda_{\max}(e^{\theta X})}$. Ideally, we would like to have $\prod_i \ex{\lambda_\max (e^{\theta \eps_i A_i})}$. The key difficulty is that $e^{A+B}\neq e^Ae^B$ for matrices. This can be resolved (by at least) two approaches. 
@@ -54,7 +54,7 @@ Let $f: I \to \R$ be a function defined on an interval $I$. Let $A = Q\Lambda Q^
 - [AW] By definition of the matrix exponential, $\lambda_\max(e^A) = e^{\lambda_\max(A)}$. Thus, treating $\lambda_\max(A)$ as a scalar random variable, we can plug it into the scalar inequality we used earlier, $\ex{e^{\theta \eps a}} \leq e^{\frac{\theta^2 a^2}{2}}$. Thus, we get, $\ex{\lambda_\max (e^{\theta \eps_i A_i})} \leq e^{\frac{\theta^2 \lambda_\max(A_i)^2}{2}}$. It is now exactly like the scalar Chernoff and we get a variance term of $\sum_i \lambda_\max(A_i)^2$.
 
 - [Tropp] We need two more facts. 
-    - Firstly, a matrix version of the 1-variable inequality. This is given by $\log \ex{e^\theta \eps_i A_i} \preceq \frac{\theta^2 A_i^2}{2}$. Here the order being used is the Loewner order ($A\preceq B$ if $B-A$ is PSD). The proof is analogous to the scalar proof and is given in Tropp's book [].
+    - Firstly, a matrix version of the 1-variable inequality. This is given by $\log \ex{e^\theta \eps_i A_i} \preceq \frac{\theta^2 A_i^2}{2}$. Here the order being used is the Loewner order ($A\preceq B$ iff $B-A$ is PSD). The proof is analogous to the scalar proof and is given in Tropp's book [].
     -  The fact that trace-exponential is monotone in the sense that if $A\preceq B$, $\tr\\, e^A \leq \tr\\, e^B$. This is easy to establish by using the fact that $A\preceq B$ implies $\lambda_i(A)\leq \lambda_i(B)$ which itself follows by Courant-Fischer. 
     
 Now, we are ready. 
