@@ -1,4 +1,4 @@
-baseURL = 'http://mittaltushant.github.io/concentrate-on-matrices'
+baseURL = 'https://theory-reading-group.ttic.edu'
 languageCode = 'en-us'
 title = 'Random Matrix Theory'
 theme = "cactus"
