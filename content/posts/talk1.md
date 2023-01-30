@@ -93,9 +93,9 @@ positive-definite matrices, is concave. </i>
 One now only needs to apply Jensen's to get the trace inequality, 
 \\[
 \begin{align}
-\mathbb{E}\Ex{n}{\tr\\, e^{\sum_{i<n} \eps_i A_i + \eps_n A_n } } ~&=~ \mathbb{E}\Ex{n}{\tr\\, e^{\sum_{i<n} \eps_i A_i+ \log (e^{\eps_nA_n})} }\\\
-~&\leq~ \mathbb{E}\\, \tr\\, e^{\sum_{i<n} \eps_i A_i +\log \Ex{X_n}{e^{\eps_nA_n}}} \\;\\;\small{\text{(Jensen's)}}\\\
-~&\leq~ \tr\\, e^{\sum_{i} \log \Ex{\eps_i A_i}{e^{\eps_i A_i}}} \\;\\;\small{\text{(Repeating the above steps for all variables)}}
+\mathbb{E}\Ex{\eps_n}{\tr\\, e^{\sum_{i<n} \eps_i A_i + \eps_n A_n } } ~&=~ \mathbb{E}\Ex{\eps_n}{\tr\\, e^{\sum_{i<n} \eps_i A_i+ \log (e^{\eps_nA_n})} }\\\
+~&\leq~ \mathbb{E}\\, \tr\\, e^{\sum_{i<n} \eps_i A_i +\log \Ex{\eps_n}{e^{\eps_nA_n}}} \\;\\;\small{\text{(Jensen's)}}\\\
+~&\leq~ \tr\\, e^{\sum_{i} \log \ex{e^{\eps_i A_i}}} \\;\\;\small{\text{(Repeating the above steps for all variables)}}
 \end{align}
 \\]  
  
