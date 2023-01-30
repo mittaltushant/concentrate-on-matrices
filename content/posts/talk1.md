@@ -54,7 +54,7 @@ Thus, we can talk of $e^A$ for any matrix $A$, of $\log (B)$ for any positive-de
 - [Ahlswede-Winter] By definition of the matrix exponential, $\lambda_\max(e^A) = e^{\lambda_\max(A)}$. Thus, treating $\lambda_\max(A)$ as a scalar random variable, we can plug it into the scalar inequality we used earlier, $\ex{e^{\theta \eps a}} \leq e^{\frac{\theta^2 a^2}{2}}$. Thus, we get, $\ex{\lambda_\max (e^{\theta \eps_i A_i})} \leq e^{\frac{\theta^2 \lambda_\max(A_i)^2}{2}}$. It is now exactly like the scalar Chernoff and we get a variance term of $\sum_i \lambda_\max(A_i)^2$.
 
 - [Tropp] We need two more facts. 
-    - Firstly, a matrix version of the 1-variable inequality. This is given by $\log \ex{e^\theta \eps_i A_i} \preceq \frac{\theta^2 A_i^2}{2}$. Here the order being used is the Loewner order ($A\preceq B$ iff $B-A$ is PSD). The proof is analogous to the scalar proof and is given in Tropp's book [].
+    - Firstly, a matrix version of the 1-variable inequality. This is given by $\log \ex{e^{\theta \eps_i A_i}} \preceq \frac{\theta^2 A_i^2}{2}$. Here the order being used is the Loewner order ($A\preceq B$ iff $B-A$ is PSD). The proof is analogous to the scalar proof and is given in Tropp's book [Lemma 4.6.3].
     -  The fact that trace-exponential is monotone in the sense that if $A\preceq B$, $\tr\\, e^A \leq \tr\\, e^B$. This is easy to establish by using the fact that $A\preceq B$ implies $\lambda_i(A)\leq \lambda_i(B)$ which itself follows by Courant-Fischer. 
     
 Now, we are ready. 
@@ -93,9 +93,9 @@ positive-definite matrices, is concave. </i>
 One now only needs to apply Jensen's to get the trace inequality, 
 \\[
 \begin{align}
-\mathbb{E}\Ex{X_n}{\tr\\, e^{\sum_{i<n} X_i+ X_n} } ~&=~ \mathbb{E}\Ex{X_n}{\tr\\, e^{\sum_{i<n} X_i+ \log (e^{X_n})} }\\\
-~&\leq~ \mathbb{E}\\, \tr\\, e^{\sum_{i<n} X_i +\log \Ex{X_n}{e^{X_n}}} \\;\\;\small{\text{(Jensen's)}}\\\
-~&\leq~ \tr\\, e^{\sum_{i} \log \Ex{X_i}{e^{X_i}}} \\;\\;\small{\text{(Repeating the above steps for all variables)}}
+\mathbb{E}\Ex{n}{\tr\\, e^{\sum_{i<n} \eps_i A_i + \eps_n A_n } } ~&=~ \mathbb{E}\Ex{n}{\tr\\, e^{\sum_{i<n} \eps_i A_i+ \log (e^{\eps_nA_n})} }\\\
+~&\leq~ \mathbb{E}\\, \tr\\, e^{\sum_{i<n} \eps_i A_i +\log \Ex{X_n}{e^{\eps_nA_n}}} \\;\\;\small{\text{(Jensen's)}}\\\
+~&\leq~ \tr\\, e^{\sum_{i} \log \Ex{\eps_i A_i}{e^{\eps_i A_i}}} \\;\\;\small{\text{(Repeating the above steps for all variables)}}
 \end{align}
 \\]  
  
