@@ -1,5 +1,5 @@
 ---
-title: On Mixing Distributions Via Random Orthogonal Matrices and the Spectrum of the Singular Values of Multi-Z Shaped Graph Matrices - II
+title: On Mixing Distributions Via Random Orthogonal Matrices and the Spectrum of the Singular Values of Multi-Z Shaped Graph Matrices
 date: 2023-03-02
 speaker: Wenjun Cai
 ---
