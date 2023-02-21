@@ -1,10 +1,12 @@
 ---
-title: On Mixing Distributions Via Random Orthogonal Matrices and the Spectrum of the Singular Values of Multi-Z Shaped Graph Matrices - I
+title: On the Spectrum of the Singular Values of Z-Shaped Graph Matrices
 date: 2023-02-23
 speaker: Aaron Potechin
 ---
 
 The talk is based on the paper, *On Mixing Distributions Via Random Orthogonal Matrices and the Spectrum of the Singular Values of Multi-Z Shaped Graph Matrices* by Wenjun Cai, and, Aaron Potechin. [arXiv link](https://arxiv.org/abs/2206.02224).
 
-## Abstract (from the paper)
-> In this paper, we introduce and analyze a new operation $\circ_R$ which mixes two distributions $\Omega$ and $\Omega'$ via a random orthogonal matrix. In particular, we take $\Omega\circ_R\Omega'$ to be the limit as $n\to\infty$ of the distribution of singular values of $DRD'$ where $D$ and $D'$ are $n\times n$ diagonal matrices whose diagonal entries have distributions $\Omega$ and $\Omega'$ respectively and $R$ is a random $n\times n$ orthogonal matrix. We show that $\circ_R$ has several nice properties. We first observe that $\circ_R$ is commutative and associative and compute the moments of $\Omega\circ_R\Omega'$ in terms of the moments of $\Omega$ and $\Omega'$. We then show that $\circ_R$ interacts very nicely with the spectrum of the singular values of Z-shaped and multi-Z-shaped graph matrices. This allows us to answer the question posed by our previous paper of how to describe the spectrum of the singular values of Z-shaped and multi-Z-shaped graph matrices when the input distribution is not $\\{−1,1\\}$. In our analysis, we show that the moments of our distributions are closely connected to non-crossing partitions and prove a number of new results on non-crossing partitions which may be of independent interest.
+## Abstract
+> Graph matrices are a type of matrix whose entries are functions of a random input such as a $G(n,1/2)$ graph. Thus, graph matrices have entries which are random but are generally not independent. Mathematically, little is known about graph matrices except for rough norm bounds. While these rough norm bounds are sufficient for many applications, we can hope to analyze graph matrices more precisely.
+Wigner’s Semicircle Law is a classic result in random matrix theory which says that if $M$ is an $n \times n$ symmetric matrix with random entries drawn independently from a distribution with mean 0 and variance 1 (and bounded moments) then as $n \to \infty$, the spectrum of the eigenvalues of $\frac{M}{\sqrt{n}}$ approaches $\frac{\sqrt{4-x^2}}{2\pi}$.
+In this talk, I will describe an analogue of Wigner’s Semicircle Law for Z-shaped graph matrices. I will begin by introducing graph matrices and why they are useful. I will then give a derivation of Wigner’s Semicircle Law and describe how the analysis can be generalized to find the spectrum of the singular values of Z-shaped graph matrices. Finally, I will briefly describe our follow-up work on this topic and some open problems.
